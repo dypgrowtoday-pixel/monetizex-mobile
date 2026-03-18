@@ -1,0 +1,94 @@
+{
+  "name": "monetizex-mobile",
+  "version": "1.0.0",
+  "description": "MonetizeX mobile-first website - The fastest way to mass distribute your brand",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "monetizex",
+    "website",
+    "mobile-first",
+    "responsive",
+    "influencer-marketing",
+    "discord-bot",
+    "content-creators",
+    "tiktok",
+    "instagram",
+    "youtube-shorts"
+  ],
+  "author": "MonetizeX Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "compression": "^1.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dypgrowtoday-pixel/monetizex-mobile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dypgrowtoday-pixel/monetizex-mobile/issues"
+  },
+  "homepage": "https://github.com/dypgrowtoday-pixel/monetizex-mobile#readme"
+}
+```
+
+---
+
+## 📝 **HOW TO ADD THIS TO GITHUB:**
+
+1. Go to your GitHub repo: `monetizex-mobile`
+2. Click **"Add file"** → **"Create new file"**
+3. Name it: `package.json`
+4. **Paste the entire code above**
+5. Click **"Commit changes..."**
+6. Commit message: `Add package.json`
+7. Click **"Commit changes"**
+
+---
+
+## ✅ **WHAT THIS FILE CONTAINS:**
+
+### **Dependencies:**
+- **express** (v4.18.2) - Web server framework
+- **compression** (v1.7.4) - Gzip compression middleware
+
+### **Dev Dependencies:**
+- **nodemon** (v3.0.1) - Auto-restart server on file changes (for local development)
+
+### **Scripts:**
+- `npm start` - Starts production server
+- `npm run dev` - Starts development server with auto-reload
+
+### **Engine Requirements:**
+- Node.js 18+ required
+- npm 9+ required
+
+---
+
+## 🎯 **AFTER ADDING THIS FILE:**
+
+Your **COMPLETE** GitHub repo should have:
+```
+monetizex-mobile/
+├── css/
+│   └── mobile.css      ✅
+├── images/             ✅
+├── js/
+│   └── main.js         ✅
+├── .gitignore          ✅
+├── index.html          ✅
+├── README.md           ✅
+├── server.js           ✅
+└── package.json        ✅ (THIS FILE)
