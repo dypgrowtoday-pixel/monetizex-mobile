@@ -1,0 +1,162 @@
+const express = require('express');
+const path = require('path');
+const compression = require('compression');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// ==========================================
+// MIDDLEWARE
+// ==========================================
+
+// Enable gzip compression
+app.use(compression());
+
+// Security headers
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  next();
+});
+
+// ==========================================
+// STATIC FILE SERVING
+// ==========================================
+
+// Serve all static files from root directory
+app.use(express.static(path.join(__dirname), {
+  maxAge: '1d',
+  etag: true,
+  lastModified: true
+}));
+
+// Cache control for specific folders
+app.use('/css', express.static('css', { 
+  maxAge: '7d',
+  immutable: true 
+}));
+
+app.use('/js', express.static('js', { 
+  maxAge: '7d',
+  immutable: true 
+}));
+
+app.use('/images', express.static('images', { 
+  maxAge: '30d',
+  immutable: true 
+}));
+
+// ==========================================
+// ROUTES
+// ==========================================
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime()
+  });
+});
+
+// Serve index.html for all other routes (SPA support)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// ==========================================
+// ERROR HANDLING
+// ==========================================
+
+// 404 handler
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Error handler
+app.use((err, req, res, next) => {
+  console.error('Error:', err.stack);
+  res.status(500).send('Something went wrong!');
+});
+
+// ==========================================
+// START SERVER
+// ==========================================
+
+app.listen(PORT, () => {
+  console.log('');
+  console.log('🚀 ════════════════════════════════════════════');
+  console.log('   MonetizeX Mobile Website');
+  console.log('════════════════════════════════════════════ 🚀');
+  console.log('');
+  console.log(`📱 Server running on port: ${PORT}`);
+  console.log(`🌐 Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`⏰ Started at: ${new Date().toLocaleString()}`);
+  console.log('');
+  console.log('✅ Mobile-first site deployed successfully!');
+  console.log('');
+  console.log('════════════════════════════════════════════');
+  console.log('');
+});
+
+// ==========================================
+// GRACEFUL SHUTDOWN
+// ==========================================
+
+process.on('SIGTERM', () => {
+  console.log('SIGTERM signal received: closing HTTP server');
+  process.exit(0);
+});
+
+process.on('SIGINT', () => {
+  console.log('SIGINT signal received: closing HTTP server');
+  process.exit(0);
+});
+```
+
+---
+
+## 📝 **HOW TO ADD THIS TO GITHUB:**
+
+1. Go to your GitHub repo: `monetizex-mobile`
+2. Click **"Add file"** → **"Create new file"**
+3. Name it: `server.js`
+4. **Paste the entire code above**
+5. Click **"Commit changes..."**
+6. Commit message: `Add Express server`
+7. Click **"Commit changes"**
+
+---
+
+## ✅ **WHAT THIS SERVER DOES:**
+
+✅ **Serves static files** (HTML, CSS, JS, images)  
+✅ **Compression** (gzip) for faster loading  
+✅ **Security headers** (XSS protection, etc.)  
+✅ **Cache control** (7 days for CSS/JS, 30 days for images)  
+✅ **SPA support** (serves index.html for all routes)  
+✅ **Health check** endpoint (`/health`)  
+✅ **Error handling** (404 and 500 errors)  
+✅ **Graceful shutdown** (clean process termination)  
+✅ **Beautiful console logs** 🎨  
+
+---
+
+## 🎯 **AFTER ADDING THIS FILE:**
+
+Your GitHub repo should have:
+```
+monetizex-mobile/
+├── css/
+│   └── mobile.css      ✅
+├── images/             ✅
+├── js/
+│   └── main.js         ✅
+├── .gitignore          ✅
+├── index.html          ✅
+├── README.md           ✅
+├── server.js           ✅ (THIS FILE)
+└── package.json        ⏳ (Add next)
