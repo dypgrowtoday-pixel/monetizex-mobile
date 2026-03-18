@@ -1,0 +1,402 @@
+# ==========================================
+# MonetizeX Mobile - .gitignore
+# ==========================================
+
+# ==========================================
+# Node.js
+# ==========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# ==========================================
+# Environment Variables
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# ==========================================
+# Operating System Files
+# ==========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# JetBrains IDEs (WebStorm, PHPStorm, IntelliJ, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+sftp-config.json
+sftp-config-alt*.json
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+tags
+[._]*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ==========================================
+# Logs
+# ==========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ==========================================
+# Build Output
+# ==========================================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.temp/
+tmp/
+
+# ==========================================
+# Testing
+# ==========================================
+coverage/
+*.lcov
+.nyc_output/
+.grunt
+lib-cov
+.lock-wscript
+
+# ==========================================
+# Dependency Directories
+# ==========================================
+jspm_packages/
+bower_components/
+web_modules/
+
+# ==========================================
+# TypeScript (if you add it later)
+# ==========================================
+*.tsbuildinfo
+*.tgz
+
+# ==========================================
+# Optional npm cache directory
+# ==========================================
+.npm
+
+# ==========================================
+# Optional eslint cache
+# ==========================================
+.eslintcache
+
+# ==========================================
+# Optional stylelint cache
+# ==========================================
+.stylelintcache
+
+# ==========================================
+# Microbundle cache
+# ==========================================
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# ==========================================
+# Optional REPL history
+# ==========================================
+.node_repl_history
+
+# ==========================================
+# Output of 'npm pack'
+# ==========================================
+*.tgz
+
+# ==========================================
+# Yarn Integrity file
+# ==========================================
+.yarn-integrity
+
+# ==========================================
+# dotenv environment variable files
+# ==========================================
+.env.development
+.env.test
+.env.production
+
+# ==========================================
+# parcel-bundler cache
+# ==========================================
+.cache
+.parcel-cache
+
+# ==========================================
+# Next.js
+# ==========================================
+.next/
+out/
+
+# ==========================================
+# Nuxt.js
+# ==========================================
+.nuxt
+dist
+
+# ==========================================
+# Gatsby
+# ==========================================
+.cache/
+public
+
+# ==========================================
+# vuepress
+# ==========================================
+.vuepress/dist
+
+# ==========================================
+# Serverless
+# ==========================================
+.serverless/
+.webpack/
+
+# ==========================================
+# FuseBox
+# ==========================================
+.fusebox/
+
+# ==========================================
+# DynamoDB Local
+# ==========================================
+.dynamodb/
+
+# ==========================================
+# TernJS
+# ==========================================
+.tern-port
+
+# ==========================================
+# Stores VSCode versions used for testing VSCode extensions
+# ==========================================
+.vscode-test
+
+# ==========================================
+# yarn v2
+# ==========================================
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ==========================================
+# Backup Files
+# ==========================================
+*.bak
+*.backup
+*.old
+*.orig
+*.swp
+*.swo
+*~
+
+# ==========================================
+# Compressed Files
+# ==========================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ==========================================
+# Database Files (if you add DB later)
+# ==========================================
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# ==========================================
+# Certificates & Keys
+# ==========================================
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+
+# ==========================================
+# Railway Specific
+# ==========================================
+.railway/
+
+# ==========================================
+# Vercel (if you use it later)
+# ==========================================
+.vercel
+
+# ==========================================
+# Project Specific
+# ==========================================
+
+# Keep images folder but ignore specific files
+# images/*.psd
+# images/*.ai
+# images/temp/
+
+# Old Framer CSS backup (if you kept it)
+css/framer-backup.css
+css/style.css
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Documentation drafts
+drafts/
+
+# ==========================================
+# Allow These Files
+# ==========================================
+!.gitkeep
+```
+
+---
+
+## 📝 **EXPLANATION:**
+
+This `.gitignore` file prevents the following from being committed to Git:
+
+### **Node.js Files:**
+- `node_modules/` - Dependencies (Railway installs these automatically)
+- `package-lock.json` - Lock file (optional to ignore)
+- `*.log` - Log files
+
+### **Environment Variables:**
+- `.env` files - Contains sensitive data like API keys
+- Never commit secrets!
+
+### **OS Files:**
+- `.DS_Store` (macOS)
+- `Thumbs.db` (Windows)
+- Linux temp files
+
+### **IDE Files:**
+- `.vscode/`, `.idea/` - Editor settings
+- Keeps your repo clean
+
+### **Build Files:**
+- `dist/`, `build/` - Generated files
+- Railway builds these automatically
+
+### **Backup Files:**
+- `*.bak`, `*.old` - Old versions
+- `css/style.css` - Old Framer CSS (if you kept it as backup)
+
+---
+
+## ✅ **YOUR FINAL FILE STRUCTURE:**
+```
+monetizex-mobile/
+├── index.html          ✅
+├── css/
+│   └── mobile.css      ✅
+├── js/
+│   └── main.js         ✅
+├── images/             ✅
+├── server.js           ✅
+├── package.json        ✅
+├── .gitignore          ✅ (THIS FILE)
+└── README.md           ✅
